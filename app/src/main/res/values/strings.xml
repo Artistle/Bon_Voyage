@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BonVoyage</string>
+    <string name="vtb_auth">Войти по ВТБ ID</string>
+    <string name="gos_auth">Войти с помощью Госуслуг</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_in">Войти</string>
+    <string name="have_account">Уже есть аккаунт? Войдите</string>
+    <string name="sign_up_header">Привет!\nНачнём путешествие?</string>
+    <string name="phone">Номер телефона</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="enter_code_header">Мы отправили код тебе на телефон</string>
+    <string name="enter_code_hint">Введите код</string>
+    <string name="next">Продолжить</string>
+    <string name="fill_profile_header">Немного о тебе</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="birthdate">Дата рождения</string>
+    <string name="sign_in_header">Давно не виделись!</string>
+    <string name="title_menu_main">Главная</string>
+    <string name="title_menu_account">Счёт</string>
+    <string name="title_menu_habitation">Жильё</string>
+    <string name="title_menu_messenger">Чаты</string>
+    <string name="title_menu_profile">Профиль</string>
+</resources>

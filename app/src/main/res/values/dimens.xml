@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_header">28sp</dimen>
+    <dimen name="text_button">16sp</dimen>
+    <dimen name="radius">12dp</dimen>
+    <dimen name="buttonPadding">8dp</dimen>
+    <dimen name="buttonHeight">54dp</dimen>
+    <dimen name="headerHeight">100dp</dimen>
+</resources>

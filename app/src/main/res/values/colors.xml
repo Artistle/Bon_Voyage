@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="vtb_color">#0A2973</color>
+    <color name="gos_color">#10001C3D</color>
+</resources>
