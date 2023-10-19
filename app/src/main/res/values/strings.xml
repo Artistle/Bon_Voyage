@@ -22,4 +22,6 @@
     <string name="title_menu_habitation">Жильё</string>
     <string name="title_menu_messenger">Чаты</string>
     <string name="title_menu_profile">Профиль</string>
+    <string name="title_become_a_guide">Станьте гидом</string>
+    <string name="text_become_a_guide">Придумайте свой тематический маршрут и получите баллы.</string>
 </resources>
