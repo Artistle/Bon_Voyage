@@ -27,4 +27,8 @@
     <string name="person_info">Личная информация</string>
     <string name="notifications">Уведомления</string>
     <string name="history">Мои поездки</string>
+    <string name="title_where_we_go">Куда едем?</string>
+    <string name="text_city">Город</string>
+    <string name="point_separator">•</string>
+    <string name="title_book">Забронировать</string>
 </resources>
