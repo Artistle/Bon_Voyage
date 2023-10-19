@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/profileName"
+        android:id="@+id/titleText"
         style="@style/TextViewTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,23 +25,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createHabitationView"
-        tools:text="@string/title_choosy_habitation_type" />
+        tools:text="@string/title_add_habitation_description" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextInputLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:background="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="@string/text_name"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileName"
-        app:spanCount="2"
-        tools:itemCount="5"
-        tools:listitem="@layout/item_selection_button" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTextInputLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="@string/text_description"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,10 +80,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <View
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/BaseButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="@string/title_back" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNext"
@@ -67,7 +97,6 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:text="@string/title_next" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
