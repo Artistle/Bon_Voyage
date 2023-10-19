@@ -12,10 +12,10 @@ class HabitationRepositoryImpl(
 
     override suspend fun createHabitation(habitationRequest: HabitationRequest) {
 
-        //habitationService.createHabitation(habitationRequest)
+        habitationService.createHabitation(habitationRequest)
     }
 
-    override suspend fun getHabitations(): Habitation {
-        TODO("Not yet implemented")
+    override suspend fun getHabitations(): List<Habitation> {
+        return habitationService.getHabitation().data.hostels
     }
 }

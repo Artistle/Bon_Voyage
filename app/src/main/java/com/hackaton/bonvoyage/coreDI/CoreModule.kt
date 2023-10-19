@@ -4,6 +4,7 @@ import com.hackaton.bonvoyage.MainViewModel
 import com.hackaton.bonvoyage.features.auth.fillProfile.FillProfileModule.fillProfileModule
 import com.hackaton.bonvoyage.features.auth.signIn.SignInFragmentModule.signInFragmentModule
 import com.hackaton.bonvoyage.features.auth.signUp.SignUpModule.signUpFragmentModule
+import com.hackaton.bonvoyage.features.main.habitation.module.HabitationModule.habitationModule
 import com.hackaton.bonvoyage.features.main.profile.ProfileModule.profileModule
 import com.hackaton.bonvoyage.navigation.NavigationModule
 import com.hackaton.bonvoyage.network.module.NetworkModule.networkModule
@@ -35,6 +36,7 @@ object CoreModule {
         signInFragmentModule,
         signUpFragmentModule,
         fillProfileModule,
-        profileModule
+        profileModule,
+        habitationModule
     )
 }

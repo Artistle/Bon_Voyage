@@ -39,8 +39,6 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.koin.core)
     implementation(libs.retrofit)
-    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.3"))
-    implementation("com.squareup.okhttp3:okhttp")
     api(project(":persistence"))
     api(project(":core-di"))
     api(project(":entity"))

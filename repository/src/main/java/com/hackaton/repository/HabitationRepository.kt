@@ -7,5 +7,5 @@ interface HabitationRepository {
 
     suspend fun createHabitation(habitationRequest: HabitationRequest)
 
-    suspend fun getHabitations(): Habitation
+    suspend fun getHabitations(): List<Habitation>
 }

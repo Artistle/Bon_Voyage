@@ -49,7 +49,7 @@ class ItemSelectionAdapter(
                     this.select(isSelected)
                 }
 
-                itemSelection.onClickFunc
+                itemSelection.onClickFunc.invoke(itemSelection.id)
             }
         }
 

@@ -3,22 +3,21 @@ package com.hackaton.entity.request
 
 import com.google.gson.annotations.SerializedName
 import java.io.File
+import java.io.Serializable
 
 data class HabitationRequest(
-    @SerializedName("avatar")
-    val avatar: File?,
     @SerializedName("city_id")
-    val cityId: Int,
+    var cityId: Int = 0,
     @SerializedName("date_end")
-    val dateEnd: String,
+    var dateEnd: String = "",
     @SerializedName("date_start")
-    val dateStart: String,
+    var dateStart: String = "",
     @SerializedName("description")
-    val description: String,
+    var description: String = "",
     @SerializedName("hostel_type")
-    val hostelType: Int,
+    var hostelType: Int = 0,
     @SerializedName("name")
-    val name: String,
+    var name: String = "",
     @SerializedName("person_count")
-    val personCount: Int
-)
+    var personCount: Int = 0
+): Serializable
