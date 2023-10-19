@@ -25,7 +25,7 @@ class ChooseTourTypeFragment: BaseFragment<CreateTourChooseTypeFragmentBinding>(
 
         val itemSelectionList = arrayListOf<ItemSelection>()
         for (tourType in TourType.entries){
-            itemSelectionList.add(ItemSelection(tourType.name) { chooseTourType(tourType) })
+            itemSelectionList.add(ItemSelection(tourType.id,tourType.name) { chooseTourType(tourType) })
         }
 
         binding.recycler.adapter = ItemSelectionAdapter(itemSelectionList, true)

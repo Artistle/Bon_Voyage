@@ -8,7 +8,7 @@ import com.hackaton.bonvoyage.databinding.ItemHabitationSelectionBinding
 import com.hackaton.entity.Habitation
 
 class HabitationSelectionAdapter(
-    private val selections: ArrayList<Habitation>
+    private val selections: List<Habitation>
 ): RecyclerView.Adapter<HabitationSelectionAdapter.HabitationSelectionViewHolder>() {
 
     private lateinit var binding: ItemHabitationSelectionBinding
@@ -27,20 +27,16 @@ class HabitationSelectionAdapter(
     inner class HabitationSelectionViewHolder(binding: ItemHabitationSelectionBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bindData(habitation: Habitation) {
-            binding.habitationNameTitle.text = habitation.name
-            binding.numberOfRoomsText.text = "${habitation.numberOfRooms}-комн. кв."
-            binding.floorText.text = "${habitation.floor}/${habitation.maxFloorInBuilding} этаж"
-            binding.homeOwnerNameText.text = habitation.ownerName
 
-            /**
-             * MOCK
-             */
-            binding.freeDateText.text = "${habitation.startDate}-${habitation.endDate}"
-            binding.previewImage.setImageResource(R.drawable.house_preview_mock)
-            binding.homeOwnerImage.setImageResource(R.drawable.home_owner_icon_mock)
+            binding.apply {
+                habitationNameTitle.text = habitation.name
+                habitationDescription.text = habitation.description
+                previewImage.setImageResource(R.drawable.house_preview_mock)
+                homeOwnerImage.setImageResource(R.drawable.home_owner_icon_mock)
 
-            binding.btnBook.setOnClickListener {
+                btnBook.setOnClickListener {
 
+                }
             }
         }
     }

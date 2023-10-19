@@ -9,11 +9,13 @@ import com.hackaton.interactors.auth.userUseCases.CreateUserUseCase
 import com.hackaton.interactors.auth.authUseCases.AuthStateUseCase
 import com.hackaton.interactors.auth.authUseCases.AuthUseCase
 import com.hackaton.interactors.auth.habitationUseCases.CreateHabitationUseCase
+import com.hackaton.interactors.auth.habitationUseCases.GetHabitationsUseCase
 import com.hackaton.interactors.auth.userUseCases.GetUserUseCase
 import com.hackaton.interactors.auth.userUseCases.UploadUserDataUseCase
 import com.hackaton.intercators_impl.authUseCases.AuthStateUseCaseImpl
 import com.hackaton.intercators_impl.authUseCases.AuthUseCaseImpl
 import com.hackaton.intercators_impl.habitationUseCases.CreateHabitationUseCaseImpl
+import com.hackaton.intercators_impl.habitationUseCases.GetHabitationUseCaseImpl
 import com.hackaton.intercators_impl.userUseCases.CreateUserUseCaseImpl
 import com.hackaton.intercators_impl.userUseCases.GetUserUseCaseImpl
 import com.hackaton.intercators_impl.userUseCases.UploadUserDataUseCaseImpl
@@ -44,6 +46,10 @@ object UseCaseModule {
 
         factory<CreateHabitationUseCase>(nameDeep(UseCasesQualifiers.CREATE_HABITATION)) {
             CreateHabitationUseCaseImpl(getDeeps(RepositoryQualifiers.HABITATION_REPOSITORY))
+        }
+
+        factory<GetHabitationsUseCase>(nameDeep(UseCasesQualifiers.GET_HABITATION)) {
+            GetHabitationUseCaseImpl(getDeeps(RepositoryQualifiers.HABITATION_REPOSITORY))
         }
     }
 }
