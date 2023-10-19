@@ -8,7 +8,7 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.hackaton.bonvoyage.coreFeatures.BaseFragment
 import com.hackaton.bonvoyage.databinding.SignInFragmentBinding
 import com.hackaton.bonvoyage.features.auth.signUp.SignUpFragment
-import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostFragment
+import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostActivity
 import com.hackaton.core_di.nameDeep
 import com.hackaton.core_di.qualifiers.NavigationQualifiers
 import com.hackaton.core_di.qualifiers.featureQualifiers.FeaturesQualifiers
@@ -59,7 +59,7 @@ class SignInFragment : BaseFragment<SignInFragmentBinding>(SignInFragmentBinding
     }
 
     private fun routeToMain() {
-        startActivity(Intent(context, MainHostFragment::class.java))
+        startActivity(Intent(context, MainHostActivity::class.java))
     }
 
     private fun reCheckEnabledSignIn() {

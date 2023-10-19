@@ -36,4 +36,6 @@ android {
 dependencies {
 
     implementation(libs.core.ktx)
+    implementation(libs.retrofit)
+    implementation(libs.retrofitConverter)
 }

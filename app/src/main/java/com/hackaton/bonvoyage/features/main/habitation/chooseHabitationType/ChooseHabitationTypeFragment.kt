@@ -1,4 +1,4 @@
-package com.hackaton.bonvoyage.coreFeatures.ui.createHabitation.chooseHabitationType
+package com.hackaton.bonvoyage.features.main.habitation.chooseHabitationType
 
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.hackaton.bonvoyage.coreFeatures.BaseFragment

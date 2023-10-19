@@ -9,6 +9,7 @@ import com.hackaton.core_di.qualifiers.NetworkQualifiers
 import com.hackaton.core_di.qualifiers.PersistenceQualifiers
 import com.hackaton.core_di.qualifiers.ServiceQualifiers
 import com.hackaton.network.services.AuthService
+import com.hackaton.network.services.HabitationService
 import com.hackaton.network.services.UserService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -46,6 +47,16 @@ object NetworkModule {
             ).createService(UserService::class.java)
         }
 
+        factory<HabitationService>(nameDeep(ServiceQualifiers.HABITATION_SERVICE)) {
+            ServiceFactoryImpl(
+                getDeeps<OkHttpClient.Builder>(NetworkQualifiers.OKHTTP_CLIENT_BUILDER).addInterceptor(
+                    getDeeps<Interceptor>(
+                        NetworkQualifiers.AUTH_INTERCEPTOR
+                    )
+                ),
+                getDeeps(NetworkQualifiers.CALL_ADAPTER_FACTORY)
+            ).createService(HabitationService::class.java)
+        }
 
     }
 }

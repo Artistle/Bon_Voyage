@@ -12,14 +12,14 @@ import com.github.terrakok.cicerone.androidx.AppNavigator
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.hackaton.bonvoyage.databinding.ActivityMainBinding
 import com.hackaton.bonvoyage.features.auth.signIn.SignInFragment
-import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostFragment
+import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostActivity
 import com.hackaton.core_di.nameDeep
 import com.hackaton.core_di.qualifiers.NavigationQualifiers
 import com.hackaton.entity.AuthState
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : AppCompatActivity() {
+class AuthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModel<MainViewModel>()
@@ -40,14 +40,14 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         viewModel.apply {
             loadState()
-            stateFlow.observe(this@MainActivity, ::startDestination)
+            stateFlow.observe(this@AuthActivity, ::startDestination)
         }
     }
 
     private fun startDestination(authState: AuthState) {
 
         when(authState) {
-            AuthState.AUTHORIZED -> startActivity(Intent(this, MainHostFragment::class.java))
+            AuthState.AUTHORIZED -> startActivity(Intent(this, MainHostActivity::class.java))
             AuthState.UNAUTHORIZED -> router.newRootScreen(SignInFragment.getInstanceSignInFragment())
         }
     }

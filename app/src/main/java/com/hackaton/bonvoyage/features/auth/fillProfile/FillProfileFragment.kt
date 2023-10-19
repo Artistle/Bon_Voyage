@@ -4,10 +4,9 @@ import android.content.Intent
 import androidx.lifecycle.lifecycleScope
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import com.hackaton.bonvoyage.MainViewModel
 import com.hackaton.bonvoyage.coreFeatures.BaseFragment
 import com.hackaton.bonvoyage.databinding.FillProfileDataFragmentBinding
-import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostFragment
+import com.hackaton.bonvoyage.features.main.fragmentHost.MainHostActivity
 import com.hackaton.core_di.nameDeep
 import com.hackaton.core_di.qualifiers.NavigationQualifiers
 import com.hackaton.core_di.qualifiers.featureQualifiers.FeaturesQualifiers
@@ -28,7 +27,7 @@ class FillProfileFragment :
         viewModel.apply {
             lifecycleScope.launch {
                 fillProfileResult.collectLatest {
-                    if (it) startActivity(Intent(context, MainHostFragment::class.java))
+                    if (it) startActivity(Intent(context, MainHostActivity::class.java))
                 }
             }
         }
