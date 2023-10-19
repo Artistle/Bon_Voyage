@@ -11,7 +11,8 @@ import com.hackaton.bonvoyage.databinding.ItemSelectionButtonBinding
 import com.hackaton.entity.ItemSelection
 
 class ItemSelectionAdapter(
-    private val selections: ArrayList<ItemSelection>
+    private val selections: ArrayList<ItemSelection>,
+    private val isMultiSelection: Boolean
 ): RecyclerView.Adapter<ItemSelectionAdapter.ItemSelectionViewHolder>() {
 
     private lateinit var binding: ItemSelectionButtonBinding
@@ -31,14 +32,22 @@ class ItemSelectionAdapter(
 
     inner class ItemSelectionViewHolder(binding: ItemSelectionButtonBinding): RecyclerView.ViewHolder(binding.root) {
 
+        private var isSelected: Boolean = false
+
         fun bindData(itemSelection: ItemSelection) {
             binding.button.text = itemSelection.title
             binding.button.setOnClickListener {
-                if(selectedItemSelectionViewHolder != null){
-                    selectedItemSelectionViewHolder!!.select(false)
+                if(!isMultiSelection) {
+                    if (selectedItemSelectionViewHolder != null) {
+                        selectedItemSelectionViewHolder!!.select(false)
+                    }
+                    selectedItemSelectionViewHolder = this
+                    selectedItemSelectionViewHolder!!.select(true)
                 }
-                selectedItemSelectionViewHolder = this
-                selectedItemSelectionViewHolder!!.select(true)
+                else{
+                    isSelected = !isSelected
+                    this.select(isSelected)
+                }
 
                 itemSelection.onClickFunc
             }

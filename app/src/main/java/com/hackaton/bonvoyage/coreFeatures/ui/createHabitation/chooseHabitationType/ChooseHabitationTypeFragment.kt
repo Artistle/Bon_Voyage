@@ -19,7 +19,7 @@ class ChooseHabitationTypeFragment: BaseFragment<CreateHabitationChooseTypeFragm
             itemSelectionList.add(ItemSelection(habitationType.name) { chooseHabitationType(habitationType) })
         }
 
-        binding.recycler.adapter = ItemSelectionAdapter(itemSelectionList)
+        binding.recycler.adapter = ItemSelectionAdapter(itemSelectionList, false)
     }
 
     private fun chooseHabitationType(habitationType: HabitationType) {
