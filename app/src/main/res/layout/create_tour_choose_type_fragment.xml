@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createTourView"
-        tools:text="@string/title_choose_tour_type" />
+        android:text="@string/title_choose_tour_type" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
