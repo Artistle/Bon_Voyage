@@ -36,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
         app:endIconMode="password_toggle"
         android:layout_marginTop="16dp">
 

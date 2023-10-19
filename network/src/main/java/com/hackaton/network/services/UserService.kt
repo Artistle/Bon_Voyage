@@ -11,7 +11,7 @@ import retrofit2.http.POST
 interface UserService {
 
     @POST("user_data/")
-    fun uploadUserData(@Body userDataRequest: UploadUserDataRequest): UserResponse
+    suspend fun uploadUserData(@Body userDataRequest: UploadUserDataRequest): UserResponse
 
     @GET("auth/")
     suspend fun getUser(): UserResponse

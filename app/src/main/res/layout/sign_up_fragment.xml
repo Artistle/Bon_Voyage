@@ -13,6 +13,7 @@
         android:text="@string/sign_up_header"/>
 
     <com.google.android.material.textfield.TextInputLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/phone"
@@ -21,6 +22,7 @@
         android:layout_marginTop="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
@@ -30,6 +32,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
@@ -37,6 +40,7 @@
         android:layout_marginTop="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -45,6 +49,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/repeat_password"
@@ -52,6 +57,7 @@
         android:layout_marginTop="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/retryPasswordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -81,6 +87,7 @@
         android:layout_marginTop="12dp"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/buttonHeight"
         android:text="@string/sign_in"
@@ -88,6 +95,7 @@
         android:layout_marginTop="48dp"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"

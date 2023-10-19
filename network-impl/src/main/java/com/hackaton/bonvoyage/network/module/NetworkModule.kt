@@ -10,6 +10,7 @@ import com.hackaton.core_di.qualifiers.PersistenceQualifiers
 import com.hackaton.core_di.qualifiers.ServiceQualifiers
 import com.hackaton.network.services.AuthService
 import com.hackaton.network.services.UserService
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 
@@ -17,7 +18,7 @@ object NetworkModule {
 
     val networkModule = module {
 
-        factory(nameDeep(NetworkQualifiers.AUTH_INTERCEPTOR)) {
+        factory<Interceptor>(nameDeep(NetworkQualifiers.AUTH_INTERCEPTOR)) {
             AuthInterceptor(getDeeps(PersistenceQualifiers.PREFERENCE_MANAGER))
         }
 
@@ -37,7 +38,7 @@ object NetworkModule {
         factory<UserService>(nameDeep(ServiceQualifiers.USER_SERVICE)) {
             ServiceFactoryImpl(
                 getDeeps<OkHttpClient.Builder>(NetworkQualifiers.OKHTTP_CLIENT_BUILDER).addInterceptor(
-                    getDeeps(
+                    getDeeps<Interceptor>(
                         NetworkQualifiers.AUTH_INTERCEPTOR
                     )
                 ),

@@ -1,7 +1,10 @@
 package com.hackaton.bonvoyage.coreDI
 
 import com.hackaton.bonvoyage.MainViewModel
+import com.hackaton.bonvoyage.features.auth.fillProfile.FillProfileModule.fillProfileModule
 import com.hackaton.bonvoyage.features.auth.signIn.SignInFragmentModule.signInFragmentModule
+import com.hackaton.bonvoyage.features.auth.signUp.SignUpModule.signUpFragmentModule
+import com.hackaton.bonvoyage.features.main.profile.ProfileModule.profileModule
 import com.hackaton.bonvoyage.navigation.NavigationModule
 import com.hackaton.bonvoyage.network.module.NetworkModule.networkModule
 import com.hackaton.core_di.getDeeps
@@ -17,9 +20,7 @@ object CoreModule {
 
     private val featureModule = module {
         viewModel {
-            MainViewModel(
-                getDeeps(UseCasesQualifiers.AUTH_STATE_USE_CASE)
-            )
+            MainViewModel(getDeeps(UseCasesQualifiers.AUTH_STATE_USE_CASE))
         }
     }
 
@@ -31,6 +32,9 @@ object CoreModule {
         repositoryModule,
         useCaseModule,
         featureModule,
-        signInFragmentModule
+        signInFragmentModule,
+        signUpFragmentModule,
+        fillProfileModule,
+        profileModule
     )
 }

@@ -24,4 +24,7 @@
     <string name="title_menu_profile">Профиль</string>
     <string name="title_become_a_guide">Станьте гидом</string>
     <string name="text_become_a_guide">Придумайте свой тематический маршрут и получите баллы.</string>
+    <string name="person_info">Личная информация</string>
+    <string name="notifications">Уведомления</string>
+    <string name="history">Мои поездки</string>
 </resources>

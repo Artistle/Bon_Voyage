@@ -13,9 +13,9 @@ interface AuthService {
     @POST("/auth/")
     suspend fun auth(@Body requestAuthBody: CreateUserRequest): UserResponse
 
-    @POST("/user")
-    fun createUser(@Body createUserRequest: CreateUserRequest): UserResponse
+    @POST("/user/")
+    suspend fun createUser(@Body createUserRequest: CreateUserRequest): UserResponse
 
     @GET("/user_vtb")
-    fun authByVtb(): UserResponse
+    suspend fun authByVtb(): UserResponse
 }

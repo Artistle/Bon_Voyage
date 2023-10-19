@@ -17,7 +17,7 @@ class AuthRepositoryImpl(
     override suspend fun auth(password: String, phoneNumber: String): Profile = withContext(Dispatchers.IO) {
         val response =
             authService.auth(CreateUserRequest(password = password, phoneNumber = phoneNumber)).data
-        setAuthState(response?.tokenAuth, response?.vtbAuth, response?.externalId)
+        setAuthState(response.tokenAuth, response.vtbAuth, response.externalId)
         return@withContext Profile(
             email = response.email,
             name = response.name,
@@ -32,13 +32,13 @@ class AuthRepositoryImpl(
 
     override suspend fun createUser(phoneNumber: String, password: String): Profile =
         withContext(Dispatchers.IO) {
-            val vtbToken = preferenceManager.vtbToken
-            val externalId = preferenceManager.externalId
             val response = authService.createUser(
                 CreateUserRequest(
-                    password, phoneNumber, vtbToken, externalId
+                    password, phoneNumber, null, null
                 )
             ).data
+
+            setAuthState(newToken = response.tokenAuth, newVtbToken = response.vtbAuth, newExternalId = response.externalId)
             return@withContext Profile(
                 name = response.name,
                 lastname = response.lastname,
