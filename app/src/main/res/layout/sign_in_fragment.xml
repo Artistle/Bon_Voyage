@@ -72,12 +72,11 @@
         style="@style/BaseButton"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signIn"
+        android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/buttonHeight"
         android:text="@string/sign_in"
         android:layout_marginTop="48dp"
-        android:enabled="false"
         style="@style/BaseButton"/>
 
     <com.google.android.material.button.MaterialButton

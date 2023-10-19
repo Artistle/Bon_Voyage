@@ -17,7 +17,7 @@ class AuthRepositoryImpl(
     override suspend fun auth(password: String, phoneNumber: String): Profile = withContext(Dispatchers.IO) {
         val response =
             authService.auth(CreateUserRequest(password = password, phoneNumber = phoneNumber)).data
-        setAuthState(response.tokenAuth, response.vtbAuth, response.externalId)
+        setAuthState(response?.tokenAuth, response?.vtbAuth, response?.externalId)
         return@withContext Profile(
             email = response.email,
             name = response.name,

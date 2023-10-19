@@ -36,13 +36,13 @@ class SignInFragment : BaseFragment<SignInFragmentBinding>(SignInFragmentBinding
         binding.apply {
             passwordEditText.addTextChangedListener { reCheckEnabledSignIn() }
             phoneEditText.addTextChangedListener { reCheckEnabledSignIn() }
-            btnSignUp.setOnClickListener { defaultSignIn() }
+            btnSignIn.setOnClickListener { defaultSignIn() }
+            btnSignUp.setOnClickListener { router.navigateTo(SignUpFragment.getInstanceSignUpFragment()) }
         }
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.signInDefault("+79000000000", "password")
     }
 
     private fun defaultSignIn() {
@@ -60,12 +60,11 @@ class SignInFragment : BaseFragment<SignInFragmentBinding>(SignInFragmentBinding
     }
 
     private fun routeToMain() {
-        Toast.makeText(context, "Success", Toast.LENGTH_LONG).show()
         startActivity(Intent(context, MainHostFragment::class.java))
     }
 
     private fun reCheckEnabledSignIn() {
-        binding.signIn.isEnabled =
+        binding.btnSignIn.isEnabled =
             !binding.passwordEditText.text.isNullOrEmpty() && !binding.phoneEditText.text.isNullOrEmpty()
     }
 

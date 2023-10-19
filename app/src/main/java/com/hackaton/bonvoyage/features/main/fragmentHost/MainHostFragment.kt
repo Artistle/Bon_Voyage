@@ -17,8 +17,8 @@ import org.koin.android.ext.android.inject
 class MainHostFragment: AppCompatActivity() {
 
     private lateinit var binding: ActivityAppBinding
-    private val router: Router by inject(nameDeep(NavigationQualifiers.ROUTER))
-    private val holder: NavigatorHolder by inject(nameDeep(NavigationQualifiers.HOLDER))
+    private val router: Router by inject(nameDeep(NavigationQualifiers.ROUTER_MAIN))
+    private val holder: NavigatorHolder by inject(nameDeep(NavigationQualifiers.HOLDER_MAIN))
     private val navigator: AppNavigator by lazy {
         AppNavigator(this, binding.fragmentContainerView.id)
     }

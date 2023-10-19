@@ -1,10 +1,10 @@
-package com.hackaton.bonvoyage.navigation
+package com.hackaton.bonvoyage.navigation.navigationAuth
 
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
 
-class NavigationImpl: NavigationApi {
+class NavigationAuthImpl: NavigationAuth {
 
     override val cicerone: Cicerone<Router>
         get() = Cicerone.create()
