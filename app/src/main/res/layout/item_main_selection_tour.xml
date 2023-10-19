@@ -10,7 +10,7 @@
         android:id="@+id/sectionTourImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.TourPreview"
         app:srcCompat="@drawable/img"/>
 
     <TextView
