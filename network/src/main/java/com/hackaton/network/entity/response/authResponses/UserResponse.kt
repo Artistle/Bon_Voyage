@@ -6,30 +6,30 @@ import kotlin.properties.Delegates
 
 data class UserResponse(
     @SerializedName("code")
-    val code: Int,
+    val code: Int?,
     @SerializedName("data")
     val data: UserResponseData,
     @SerializedName("success")
-    val success: Boolean
+    val success: Boolean?
 )
 
 data class UserResponseData(
     @SerializedName("email")
-    val email: String,
+    val email: String?,
     @SerializedName("external_id")
-    val externalId: String,
+    val externalId: String?,
     @SerializedName("id")
-    val id: Int,
+    val id: Int?,
     @SerializedName("lastname")
-    val lastname: String,
+    val lastname: String?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("phone_number")
-    val phoneNumber: String,
+    val phoneNumber: String?,
     @SerializedName("token_auth")
-    val tokenAuth: String,
+    val tokenAuth: String?,
     @SerializedName("vtb_auth")
-    val vtbAuth: String
+    val vtbAuth: String?
 )
 
 class TestCheck<D>(dataModel: Class<D>) {

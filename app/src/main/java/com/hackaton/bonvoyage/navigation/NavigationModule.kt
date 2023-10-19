@@ -20,5 +20,15 @@ object NavigationModule {
         single<NavigatorHolder>(nameDeep(NavigationQualifiers.HOLDER)) {
             getDeeps<Cicerone<Router>>(NavigationQualifiers.CICERONE).getNavigatorHolder()
         }
+
+        single<Cicerone<Router>>(nameDeep(NavigationQualifiers.CICERONE_MAIN)) { Cicerone.create() }
+
+        single<Router>(nameDeep(NavigationQualifiers.ROUTER_MAIN)) {
+            getDeeps<Cicerone<Router>>(NavigationQualifiers.CICERONE_MAIN).router
+        }
+
+        single<NavigatorHolder>(nameDeep(NavigationQualifiers.HOLDER_MAIN)) {
+            getDeeps<Cicerone<Router>>(NavigationQualifiers.CICERONE_MAIN).getNavigatorHolder()
+        }
     }
 }

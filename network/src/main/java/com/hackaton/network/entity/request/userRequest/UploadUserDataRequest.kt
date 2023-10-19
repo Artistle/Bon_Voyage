@@ -8,13 +8,13 @@ data class UploadUserDataRequest(
     val externalId: String?,
 
     @SerializedName("lastname")
-    val lastname: String,
+    val lastname: String?,
 
     @SerializedName("name")
-    val name: String,
+    val name: String?,
 
     @SerializedName("phone_number")
-    val phoneNumber: String,
+    val phoneNumber: String?,
 
     @SerializedName("vtb_auth")
     val vtbAuth: String? = null

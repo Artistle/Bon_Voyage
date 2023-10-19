@@ -10,7 +10,7 @@ import retrofit2.http.POST
 interface AuthService {
 
     //@GET("/user")
-    @POST("/auth")
+    @POST("/auth/")
     suspend fun auth(@Body requestAuthBody: CreateUserRequest): UserResponse
 
     @POST("/user")
