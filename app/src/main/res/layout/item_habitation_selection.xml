@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/houseImage"
+        android:id="@+id/previewImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/house_preview_mock" />
 
     <TextView
-        android:id="@+id/houseNameTitle"
+        android:id="@+id/habitationNameTitle"
         style="@style/TextViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,8 +37,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="20dp"
             android:paddingTop="10dp"
-            android:paddingEnd="0dp"
-            android:text="@string/text_number_of_rooms" />
+            android:paddingEnd="0dp" />
 
         <TextView
             style="@style/TextViewHouseDescription"
@@ -53,8 +52,7 @@
             style="@style/TextViewHouseDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/text_floor" />
+            android:paddingTop="10dp" />
     </LinearLayout>
 
     <TextView

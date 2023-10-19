@@ -12,6 +12,7 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.hackaton.bonvoyage.R
 import com.hackaton.bonvoyage.databinding.ActivityAppBinding
 import com.hackaton.bonvoyage.databinding.ActivityMainBinding
+import com.hackaton.bonvoyage.features.main.habitation.HabitationFragment
 import com.hackaton.bonvoyage.features.main.main.MainFragment
 import com.hackaton.bonvoyage.features.main.profile.ProfileFragment
 import com.hackaton.core_di.nameDeep
@@ -45,7 +46,10 @@ class MainHostFragment: AppCompatActivity() {
                     true
                 }
                 R.id.account -> { true }
-                R.id.habitation -> { true }
+                R.id.habitation -> {
+                    router.navigateTo(HabitationFragment.getInstanceProfileFragment())
+                    true
+                }
                 R.id.messenger -> { true }
                 R.id.profile -> {
                     router.navigateTo(ProfileFragment.getInstanceProfileFragment())
