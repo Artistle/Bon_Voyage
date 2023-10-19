@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/baseline_person_24"
+        android:padding="5dp"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TransparentButtonButton"
+        app:icon="@drawable/ic_profile"
+        app:iconSize="36dp"
+        android:text="hhhhhhhhhh"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TransparentButtonButton"
+        app:icon="@drawable/ic_history"
+        app:iconSize="36dp"
+        android:text="hhhhhhhhhh"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TransparentButtonButton"
+        app:icon="@drawable/ic_notification"
+        app:iconSize="36dp"
+        android:text="hhhhhhhhhh"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

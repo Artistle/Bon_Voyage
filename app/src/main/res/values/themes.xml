@@ -30,9 +30,26 @@
         <item name="android:padding">@dimen/buttonPadding</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.Avatar" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="TransparentButtonButton" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/vtb_book</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="cornerRadius">@dimen/radius</item>
+        <item name="android:padding">@dimen/buttonPadding</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="iconTint">#7098DA</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.TourPreview" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="borderWidth">3dp</item>
+        <item name="background">@color/white</item>
     </style>
 
 </resources>
