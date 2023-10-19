@@ -25,7 +25,7 @@ class ChooseHabitationTypeFragment: BaseFragment<CreateHabitationChooseTypeFragm
 
         val itemSelectionList = arrayListOf<ItemSelection>()
         for (habitationType in HabitationType.entries){
-            itemSelectionList.add(ItemSelection(habitationType.name) { chooseHabitationType(habitationType) })
+            itemSelectionList.add(ItemSelection(habitationType.type, habitationType.name) { chooseHabitationType(habitationType) })
         }
 
         binding.recycler.adapter = ItemSelectionAdapter(itemSelectionList, false)
