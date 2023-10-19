@@ -54,13 +54,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnCreateHbitation"
+            android:id="@+id/btnCreateHabitation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/imageView"
-            android:text="Добавить свой жильё"
-            style="@style/TransparentButtonButton"/>
-
+            android:text="@string/title_add_your_habitation"
+            style="@style/TransparentButton"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_"
@@ -71,7 +70,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnCreateHbitation"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateHabitation"
             tools:itemCount="5"
             tools:listitem="@layout/item_habitation_selection" />
 

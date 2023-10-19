@@ -29,7 +29,7 @@ class HabitationFragment: BaseFragment<HabitationFragmentBinding>(HabitationFrag
             )
         )
 
-        binding.btnCreateHbitation.setOnClickListener {
+        binding.btnCreateHabitation.setOnClickListener {
             router.navigateTo(ChooseHabitationTypeFragment.getInstanceProfileFragment())
         }
     }

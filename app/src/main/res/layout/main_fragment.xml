@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Выберите город"
+            android:text="@string/title_choose_city"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout" />
@@ -39,7 +39,7 @@
             android:layout_marginHorizontal="48dp"
             android:background="@color/white"
             android:backgroundTint="@android:color/transparent"
-            android:hint="Ваш город"
+            android:hint="@string/text_your_city"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:background="@color/white"
-                />
+                android:background="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
@@ -70,13 +69,13 @@
                 android:fontFamily="@font/vtb_book"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:text="Как добраться?"/>
+                android:text="@string/title_hout_to_get"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Откуда">
+                android:hint="@string/title_from_where">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -89,7 +88,7 @@
                 style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Куда">
+                android:hint="@string/title_where">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -113,7 +112,7 @@
                 android:id="@+id/signInByGos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Выбрать даты"
+                android:text="@string/title_choose_date"
                 android:backgroundTint="#E0FCFF"
                 android:textColor="@color/black"
                 app:icon="@drawable/baseline_calendar_today"
@@ -145,7 +144,7 @@
             android:layout_height="@dimen/buttonHeight"
             style="@style/BaseButton"
             android:layout_marginHorizontal="16dp"
-            android:text="Выбрать прогулку"
+            android:text="@string/title_choose_tour"
             app:layout_constraintTop_toBottomOf="@+id/recycler_"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>

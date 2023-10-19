@@ -9,11 +9,8 @@
         android:id="@+id/previewImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:layout_marginTop="12dp"
-        android:scaleType="centerCrop"
-        app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.HabitationPreview"
         app:srcCompat="@drawable/house_preview_mock" />
 
     <TextView
@@ -67,7 +64,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/homeOwnerImage"

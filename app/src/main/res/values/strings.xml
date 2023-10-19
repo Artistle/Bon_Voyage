@@ -43,4 +43,12 @@
     <string name="text_tour_duration">Длительность прогулки</string>
     <string name="title_back">Назад</string>
     <string name="title_choose_tour_type">Выберите тематику прогулки</string>
+    <string name="title_add_your_habitation">Добавить свой жильё</string>
+    <string name="title_choose_city">Выберите город</string>
+    <string name="text_your_city">Ваш город</string>
+    <string name="title_hout_to_get">Как добраться?</string>
+    <string name="title_from_where">Откуда</string>
+    <string name="title_where">Куда</string>
+    <string name="title_choose_date">Выбрать даты</string>
+    <string name="title_choose_tour">Выбрать прогулку</string>
 </resources>

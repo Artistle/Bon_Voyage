@@ -17,7 +17,6 @@
         android:id="@+id/sectionTourTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Прогулка"
         android:layout_marginTop="4dp"
         android:textStyle="bold"
         android:fontFamily="@font/vtb_book"

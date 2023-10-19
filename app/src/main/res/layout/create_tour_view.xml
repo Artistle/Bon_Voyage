@@ -9,11 +9,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/TextViewCreateTourHeader"
         android:paddingStart="20dp"
         android:paddingTop="30dp"
         android:paddingEnd="0dp"
-        android:text="@string/title_create_tour"
-        android:textColor="@color/white" />
+        android:text="@string/title_create_tour" />
 
     <LinearLayout
         android:layout_width="match_parent"
