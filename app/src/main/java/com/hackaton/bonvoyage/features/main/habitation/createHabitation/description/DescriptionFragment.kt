@@ -6,9 +6,7 @@ import com.hackaton.bonvoyage.databinding.CreateHabitationDescriptionFragmentBin
 import com.hackaton.entity.request.HabitationRequest
 
 
-class DescriptionFragment(
-    private val habitation: HabitationRequest
-) : BaseFragment<CreateHabitationDescriptionFragmentBinding>(
+class DescriptionFragment() : BaseFragment<CreateHabitationDescriptionFragmentBinding>(
     CreateHabitationDescriptionFragmentBinding::inflate
 ) {
 
@@ -24,7 +22,7 @@ class DescriptionFragment(
     }
 
     companion object {
-        fun getInstanceProfileFragment(habitation: HabitationRequest) =
-            FragmentScreen("HabitationRequest_$habitation") { DescriptionFragment(habitation) }
+        fun getInstanceProfileFragment() =
+            FragmentScreen { DescriptionFragment() }
     }
 }

@@ -8,7 +8,7 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.hackaton.bonvoyage.coreFeatures.BaseFragment
 import com.hackaton.bonvoyage.databinding.CreateHabitationDescriptionFragmentBinding
 import com.hackaton.bonvoyage.features.main.habitation.HabitationFragment
-import com.hackaton.bonvoyage.features.main.habitation.chooseHabitationType.ChooseHabitationTypeFragment
+import com.hackaton.bonvoyage.features.main.habitation.createHabitation.chooseHabitationType.ChooseHabitationTypeFragment
 import com.hackaton.core_di.qualifiers.NavigationQualifiers
 import org.koin.android.ext.android.inject
 import org.koin.core.qualifier.named

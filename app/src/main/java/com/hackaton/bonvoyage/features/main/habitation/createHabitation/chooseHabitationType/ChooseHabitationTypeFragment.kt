@@ -27,7 +27,7 @@ class ChooseHabitationTypeFragment(): BaseFragment<CreateHabitationChooseTypeFra
         }
 
         binding.recycler.adapter = ItemSelectionAdapter(itemSelectionList, false)
-        //binding.btnNext.setOnClickListener { router.navigateTo(DescriptionFragment.getInstanceProfileFragment()) }
+        binding.btnNext.setOnClickListener { router.navigateTo(DescriptionFragment.getInstanceProfileFragment()) }
     }
 
     private fun chooseHabitationType(habitationType: HabitationType) {
