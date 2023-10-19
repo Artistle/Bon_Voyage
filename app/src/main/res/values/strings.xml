@@ -37,8 +37,10 @@
     <string name="title_choose_habitation_type">Выберите тип жилья</string>
     <string name="title_next">Далее</string>
     <string name="title_add_habitation_description">Добавьте название и описание жилья</string>
+    <string name="title_add_tour_description">Добавьте название и описание</string>
     <string name="text_name">Название</string>
     <string name="text_description">Описание</string>
+    <string name="text_tour_duration">Длительность прогулки</string>
     <string name="title_back">Назад</string>
     <string name="title_choose_tour_type">Выберите тематику прогулки</string>
 </resources>
