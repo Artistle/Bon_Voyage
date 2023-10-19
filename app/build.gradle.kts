@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.koin.compat)
     implementation(libs.koin.navigation)
     implementation(libs.pagingData)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

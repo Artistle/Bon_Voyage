@@ -8,8 +8,8 @@ data class Habitation(
     val numberOfRooms: Int?,
     val floor: Int?,
     val maxFloorInBuilding: Int?,
-    val startDate: Date?,
-    val endDate: Date?,
+    val startDate: String?,
+    val endDate: String?,
     val ownerIcon: String?,
     val ownerName: String?
 )
